@@ -17,7 +17,12 @@ main() {
     std::cin >> n;
 
     while (n >= 0) {
-        for (i = 2; i <= n; i++)
+        if (n != 0 && n != 1 && isPrime(n))
+            std::cout << n << " is a prime\n";
+        else
+            std::cout << n << " is NOT a prime\n";
+
+        for (i = 2; i < n; i++)
             if (isPrime(i))
                 std::cout << i << " ";
 
